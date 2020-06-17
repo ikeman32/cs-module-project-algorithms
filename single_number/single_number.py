@@ -10,17 +10,29 @@ def single_number(arr):
     return single_number(target)
     '''
     try:#Try recursive method first
-        target = arr.pop(0)
+        target = arr.pop(0)#pop out first element in arr
+
+        #Check to see if target is in arr
         if target in arr:
             arr.pop(arr.index(target))
+
+        #return the target if not
         else:
             return target
+
+        #Repeat recursively
         return single_number(arr)
-    except:#If and exception occurs use a while loop
+
+    #If and exception occurs use a while loop
+    except:
+        #Loop continuously
         while True:
-            target = arr.pop(0)
+            target = arr.pop(0)#pop out first element in arr
+
+        #Check to see if target is in arr
         if target in arr:
             arr.pop(arr.index(target))
+        #return the target if not
         else:
             return target
     
